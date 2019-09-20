@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Link} from 'react-router-dom';
-import CharacterCard from './CharacterCard';
+import CharacterList from './CharacterList';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -24,10 +24,10 @@ export default function WelcomePage() {
       </section>
       <section>
       
-      <Link to='/CharacterCard'>Character Card</Link>
+      <Link to='/CharacterList'>Character Card</Link>
     
       
-      <Route exact path='/CharacterCard' component={CharacterCard} />
+      <Route exact path='/CharacterList' component={CharacterList} />
     </section>
     </Wrapper>
   );
