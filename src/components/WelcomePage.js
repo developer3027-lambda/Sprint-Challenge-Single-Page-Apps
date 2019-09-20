@@ -1,4 +1,8 @@
 import React from "react";
+import {Route, Link} from 'react-router-dom';
+import CharacterCard from './CharacterCard';
+
+
 
 export default function WelcomePage() {
   return (
@@ -11,6 +15,12 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
+      
+      <Link to='/CharacterCard'>Character Card</Link>
+
+      
+      <Route exact path='/CharacterCard' component={CharacterCard} />
     </section>
   );
+  
 }
