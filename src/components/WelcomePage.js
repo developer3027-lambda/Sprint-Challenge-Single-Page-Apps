@@ -1,11 +1,17 @@
 import React from "react";
 import {Route, Link} from 'react-router-dom';
 import CharacterCard from './CharacterCard';
+import styled from 'styled-components';
 
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
 
 
 export default function WelcomePage() {
   return (
+    <Wrapper>
     <section className="welcome-page">
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
@@ -15,12 +21,15 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
+      </section>
+      <section>
       
       <Link to='/CharacterCard'>Character Card</Link>
-
+    
       
       <Route exact path='/CharacterCard' component={CharacterCard} />
     </section>
+    </Wrapper>
   );
   
 }
