@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {Link,} from 'react-router-dom';
 import CharacterCard from './CharacterCard';
 import axios from 'axios';
 import './Components.css';
@@ -25,7 +24,6 @@ export default function SearchForm() {
     <section className="search-form">
     
       <form className='formSearch'>
-      <Link to='/CharacterList' className='link1'>Character List</Link>
       <div className='search'>
         <input
         value={search}
@@ -37,7 +35,7 @@ export default function SearchForm() {
         </div>
       </form>
       {char.map((character, index) => {
-        return (<CharacterCard key={index} {...character} />)
+        return(<CharacterCard key={index} {...character} />)
       })}
     </section>
   );
