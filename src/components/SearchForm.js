@@ -10,8 +10,8 @@ export default function SearchForm() {
     axios.get('https://rickandmortyapi.com/api/character/')
       .then(res => {
         const data = res.data.results;
-        const result = data.filter(item =>
-          item.item.toLowerCase().includes(search.toLowerCase())
+        const result = data.filter(chars =>
+          chars.name.toLowerCase().includes(search.toLowerCase())
         );
         setChar(result);
       })
@@ -23,15 +23,16 @@ export default function SearchForm() {
   return (
     <section className="search-form">
     
-      <form className='formSearch' onSubmit={handleInputChange}>
+      <form className='formSearch'>
       <span className='link1'>Character List</span>
       <div className='search'>
         <input
         value={search}
+        onChange={handleInputChange}
         className=''
         type='text'
         placeholder='Search' />
-        <button className='' type='submit'>Go</button>
+        
         </div>
       </form>
       {char.map((character, index) => {
