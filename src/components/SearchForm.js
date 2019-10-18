@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link,} from 'react-router-dom';
 import CharacterCard from './CharacterCard';
 import axios from 'axios';
 import './Components.css';
@@ -24,7 +25,7 @@ export default function SearchForm() {
     <section className="search-form">
     
       <form className='formSearch'>
-      <span className='link1'>Character List</span>
+      <Link to='/CharacterList' className='link1'>Character List</Link>
       <div className='search'>
         <input
         value={search}
