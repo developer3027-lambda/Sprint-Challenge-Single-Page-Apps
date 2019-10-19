@@ -1,0 +1,22 @@
+.search-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formSearch {
+    display: flex;
+
+}
+
+.link1 {
+    display: flex;
+    justify-content: flex-start;
+    width: 60em;
+
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+}
